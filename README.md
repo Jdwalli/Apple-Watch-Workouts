@@ -1,1 +1,1 @@
-# Apple-Watch-Workouts
+# Apple Watch Workouts
