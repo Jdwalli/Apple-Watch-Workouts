@@ -81,8 +81,9 @@ class AppleHealthExport:
                 records_data[record_name].append(record_data)
             except Exception:
                 unsupported_records.append(record_name)
-        
-        print(f"Unsupported records: {set(unsupported_records)}")
+
+        if len(unsupported_records) > 0:
+            print(f"Unsupported records: {set(unsupported_records)}")
 
         for category, category_info in APPLE_HEALTH_PROPERTY_MAPPINGS.items():
             category_directory = category_info['DIRECTORY']
