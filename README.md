@@ -5,4 +5,5 @@
 ## Tech Stack
 
 * React (as the frontend framework)
+* Tailwind CSS
 * Python3 with Flask and Pandas (for building the backend API and Data Analysis)
