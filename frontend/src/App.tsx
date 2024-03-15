@@ -8,11 +8,17 @@ import VitalsPage from "./pages/vitals/VitalsPage";
 import WorkoutsPage from "./pages/workouts/WorkoutsPage";
 import SleepPage from "./pages/sleep/SleepPage";
 
-import DateTime from "./components/common/DateTime";
-
 function App() {
   return (
-    <DateTime timestamp="2024-02-21 01:43:05 -0500" />
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/activity" element={<ActivityPage />} />
+        <Route path="/vitals" element={<VitalsPage />} />
+        <Route path="/workouts" element={<WorkoutsPage />} />
+        <Route path="/sleep" element={<SleepPage />} />
+      </Routes>
+    </div>
   );
 }
 
