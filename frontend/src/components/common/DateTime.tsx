@@ -15,11 +15,11 @@ const DateTime: React.FC<Props> = (props: Props) => {
 
   return (
       <div className="w-full">
-          <div className="flex bg-shade pr-1 pl-1 pt-0.5 pb-0.5 rounded">
+          <div className="flex bg-[#1C1C1E] justify-center items-center pr-1 pl-1 pt-0.5 pb-0.5 rounded">
               <div className="mr-1">
                   <span className="text-md text-white font-bold"> {date} </span>
               </div>
-              <div className="bg-grayshade rounded">
+              <div className="bg-[#262626] rounded">
                   <span className="text-md text-amber-400 font-bold p-1"> {time} </span>
               </div>
           </div>

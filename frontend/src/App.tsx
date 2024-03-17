@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 // Navigation
 import VerticalNavigation from "./components/navigation/VerticalNavigation";
+import TopHeader from "./components/navigation/TopHeader";
 
 // Pages
 import HomePage from "./pages/home/HomePage";
@@ -15,7 +16,8 @@ function App() {
   return (
     <div className="bg-black">
       <VerticalNavigation />
-      <div className="ml-16 p-2">
+      <TopHeader />
+      <div className="ml-16">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/activity" element={<ActivityPage />} />
