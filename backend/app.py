@@ -6,6 +6,7 @@ from processors.apple_health_export import AppleHealthExport
 from utils import file_utils as file_utils
 from utils import response_utils as response_utils
 from utils import time_utils as time_utils
+from handlers import user as user_data_handler
 
 FLASK_CONFIG = {
     "DEBUG": True,
@@ -46,7 +47,7 @@ def upload():
 """ ================ USER DATA ROUTES ================ """
 @app.route("/api/user-record", methods=["GET"])
 def send_extracted_user_data():
-    return NotImplementedError
+    return jsonify(user_data_handler.get_user_data()), 200
 
 
 """ ================ RECORD ROUTES ================ """
