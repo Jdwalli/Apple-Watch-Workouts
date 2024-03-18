@@ -1,7 +1,7 @@
 import os
 
 # DATA ROUTES
-DATA_DIRECTORY_PATH = os.path.join(os.getcwd(), "backend", "data")
+DATA_DIRECTORY_PATH = os.path.join(os.getcwd(), "data")
 DATA_SUBDIRECTORY_PATHS = {
     "Electrocardiograms": os.path.join(DATA_DIRECTORY_PATH, "Electrocardiograms"),
     "Health Records": os.path.join(DATA_DIRECTORY_PATH, "Health Records"),
