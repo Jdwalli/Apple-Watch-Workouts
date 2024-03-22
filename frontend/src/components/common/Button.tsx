@@ -9,11 +9,18 @@ interface Props {
   onClick?: () => void;
 }
 
-const styles = {
-  primary: 'bg-green-500 text-white font-bold py-2 px-4 rounded',
-  secondary: 'bg-purple-500 text-white font-bold py-2 px-4 rounded',
-  disabled: 'bg-gray-600 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed',
-};
+const primaryStyles =
+  'text-sm text-white font-semibold bg-green-600 px-5 py-2 mx-2 rounded';
+const secondaryStyles =
+  'text-sm text-white font-semibold bg-purple-600 px-5 py-2 mx-2 rounded';
+const disabled =
+  'text-sm text-shark-400 bg-shark-100 px-5 py-2 mx-2 rounded opacity-70 cursor-not-allowed';
+
+  const styles = {
+    primary: primaryStyles,
+    secondary: secondaryStyles,
+    disabled: disabled,
+  };
 
 const Button: React.FC<Props> = (props: Props) => {
   const classes = `btn ${styles[props.variant]} ${props.className ? props.className : ''}`;
