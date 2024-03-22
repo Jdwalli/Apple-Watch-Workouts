@@ -13,7 +13,7 @@ const VerticalNavigation: React.FC = () => {
   return (
     <div
       className="fixed top-0 left-0 h-screen w-16 flex flex-col
-    bg-[#1C1C1E] shadow-lg"
+    bg-shark-950 shadow-lg"
     >
       <SideBarIcon icon={<FaApple size="28" />} text={"Temp Icon"} />
       <Divider />
