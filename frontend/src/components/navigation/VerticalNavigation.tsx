@@ -9,37 +9,64 @@ import {
   FaGear,
 } from "react-icons/fa6";
 
+import classNames from "classnames";
+import { Link, useLocation } from "react-router-dom";
+import { FcBullish } from "react-icons/fc";
+import { HiOutlineLogout } from "react-icons/hi";
+import {
+  SidebarMainLinks,
+  SidebarBottomLinks,
+  SidebarNavigationData,
+} from "../../config/SidebarConfig";
+
+const linkClass =
+  "flex items-center gap-2 font-light px-3 py-2 hover:bg-neutral-700 hover:no-underline active:bg-neutral-600 rounded text-base";
+
 const VerticalNavigation: React.FC = () => {
   return (
-    <div
-      className="fixed top-0 left-0 h-screen w-16 flex flex-col
-    bg-shark-950 shadow-lg"
-    >
-      <SideBarIcon icon={<FaApple size="28" />} text={"Temp Icon"} />
-      <Divider />
-      <SideBarIcon icon={<FaHouseChimney size="26" />} text={"Home"} />
-      <SideBarIcon icon={<FaFire size="26" />} text={"Activity"} />
-      <SideBarIcon icon={<FaHeartPulse size="26" />} text={"Vitals"} />
-      <SideBarIcon icon={<FaPersonRunning size="26" />} text={"Workouts"} />
-      <SideBarIcon icon={<FaBedPulse size="26" />} text={"Sleep"} />
-      <div className="mt-auto"></div>
-      <Divider />
-      <SideBarIcon icon={<FaGear size="22" />} text={"Settings"} />
+    <div className="bg-[#1E1F25] w-60 flex flex-col h-full">
+      <div className="h-16 w-full px-4 flex items-center">
+      <div className="relative">
+				<span className="font-bold text-white text-lg">
+					Apple Watch Dashboard
+				</span>
+			</div>
+      </div>
+      <div className="mt-2 py-4 p-3 flex flex-1 flex-col gap-1.5">
+        {SidebarMainLinks.map((link) => (
+          <SidebarLink key={link.title} link={link} />
+        ))}
+      </div>
     </div>
   );
 };
 
-interface SidebarIcon {
-  icon: any;
-  text: string;
+interface SidebarLinkProps {
+  link: SidebarNavigationData;
 }
 
-const SideBarIcon = (props: SidebarIcon) => (
-  <div className="sidebar-icon group">
-    {props.icon}
-    <span className="sidebar-tooltip group-hover:scale-100">{props.text}</span>
-  </div>
-);
+const SidebarLink = (props: SidebarLinkProps) => {
+  const { pathname } = useLocation();
+
+  return (
+    <Link
+      to={props.link.path}
+      className={classNames(
+        pathname === props.link.path
+          ? "bg-[#262626] text-white"
+          : "text-white",
+        linkClass
+      )}
+    >
+      <span className="text-xl">
+        <props.link.icon className="text-[#C3FA00]" />
+      </span>
+      <span className="font-normal text-white">
+        {props.link.title}
+      </span>
+    </Link>
+  );
+};
 
 const Divider = () => <hr className="sidebar-hr" />;
 
