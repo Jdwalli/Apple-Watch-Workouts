@@ -1,9 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Navigation
-import VerticalNavigation from "./components/navigation/VerticalNavigation";
-import TopHeader from "./components/navigation/TopHeader";
+//Layout 
+import Layout from "./components/shared/Layout";
 
 // Pages
 import HomePage from "./pages/home/HomePage";
@@ -14,20 +13,10 @@ import SleepPage from "./pages/sleep/SleepPage";
 
 function App() {
   return (
-    <div className="bg-black">
-      <VerticalNavigation />
-      <TopHeader />
-      <div className="ml-16">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/activity" element={<ActivityPage />} />
-        <Route path="/vitals" element={<VitalsPage />} />
-        <Route path="/workouts" element={<WorkoutsPage />} />
-        <Route path="/sleep" element={<SleepPage />} />
-      </Routes>
-      </div>
-      
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+      </Route>
+    </Routes>
   );
 }
 
