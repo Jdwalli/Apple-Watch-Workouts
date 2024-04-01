@@ -17,21 +17,24 @@ const HomePage: React.FC<Props> = (props: Props) => {
   const healthRecordClient = new HealthRecordApiClient();
   const [exportDate, setExportDate] = React.useState<string>('1970-01-01 00:00:00')
 
-  React.useEffect(() => {
-    healthRecordClient.getUserRecord().then((data) => {
-      setExportDate(data.userData.exportDate ?? '1970-01-01 00:00:00')
-    });
+  // React.useEffect(() => {
+  //   healthRecordClient.getUserRecord().then((data) => {
+  //     setExportDate(data.userData.exportDate ?? '1970-01-01 00:00:00')
+  //   });
 
-  }, []);
+  // }, []);
 
   return (
-    <div className="p-3 flex w-full">
-      <h1 className="text-xl font-semibold tracking-wide"> Apple Watch Health Data </h1>
-      <div className="ml-auto">
-      <DateTime timestamp={exportDate} />
-      </div>
+    <div>
       
     </div>
+    // <div className="p-3 flex w-full">
+    //   <h1 className="text-xl font-semibold tracking-wide"> Apple Watch Health Data </h1>
+    //   <div className="ml-auto">
+    //   <DateTime timestamp={exportDate} />
+    //   </div>
+      
+    // </div>
   );
 };
 

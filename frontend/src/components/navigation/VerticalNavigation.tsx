@@ -1,18 +1,6 @@
 import React from "react";
-import {
-  FaApple,
-  FaHouseChimney,
-  FaFire,
-  FaHeartPulse,
-  FaPersonRunning,
-  FaBedPulse,
-  FaGear,
-} from "react-icons/fa6";
-
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
-import { FcBullish } from "react-icons/fc";
-import { HiOutlineLogout } from "react-icons/hi";
 import {
   SidebarMainLinks,
   SidebarBottomLinks,
@@ -67,7 +55,5 @@ const SidebarLink = (props: SidebarLinkProps) => {
     </Link>
   );
 };
-
-const Divider = () => <hr className="sidebar-hr" />;
 
 export default VerticalNavigation;

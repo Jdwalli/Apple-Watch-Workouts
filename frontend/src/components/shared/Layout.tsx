@@ -11,7 +11,7 @@ const Layout: React.FC<Props> = (props: Props) => {
       <VerticalNavigation />
       <div className="flex flex-col flex-1">
         <TopHeader />
-        <div className="flex-1 p-4 min-h-0 overflow-auto">
+        <div className="flex-1 p-4 min-h-0 overflow-auto bg-black text-white">
           <Outlet />
         </div>
       </div>
