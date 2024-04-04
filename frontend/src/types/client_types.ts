@@ -247,14 +247,11 @@ export interface ReturnedUserData {
 }
 
 export interface ReturnedActivityRecords {
-  exerciseTime: number;
-  exerciseTimeUnit: string;
-  flightsClimbed: number;
-  flightsClimbedUnit: string;
-  standTime: number;
-  standTimeUnit: string;
-  totalSteps: number;
-  totalStepsUnit: string;
+  record: string
+  value: number
+  unit: string
+  display: boolean
+  iconName: string
 }
 
 export interface ReturnedVitalsRecords {
@@ -266,12 +263,22 @@ export interface ReturnedVitalsRecords {
   respiratoryRateUnit: string;
 }
 
-export interface ReturnedWorkoutRecords {}
+export interface WorkoutBreakdownData {
+  id: string,
+  label: string,
+  value: number,
+  color: string
+}
+
+export interface ReturnedWorkoutRecords {
+  totalWorkouts: number,
+  workoutBreakdown: WorkoutBreakdownData[]
+}
 
 /* ====== API Responses ====== */
 export interface GetUserRecordResponse {
   userData: ReturnedUserData;
-  activityRecords: ReturnedActivityRecords;
+  activityRecords: ReturnedActivityRecords[];
   vitalRecords: ReturnedVitalsRecords;
   workoutRecords: ReturnedWorkoutRecords;
 }
