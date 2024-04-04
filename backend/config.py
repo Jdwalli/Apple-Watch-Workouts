@@ -184,6 +184,15 @@ APPLE_HEALTH_PROPERTY_MAPPINGS = {
 
 }
 
+USER_DATA_CONFIG = {
+    "RECORDS_FOR_DISPLAY" : ["StepCount", "FlightsClimbed", "ActiveEnergyBurned", "AppleExerciseTime", "AppleStandTime"],
+}
+
+ICON_RECORD_MAPPING = {
+    
+}
+
+
 # PREFIXES
 CHARACTERISTIC_PREFIX = "HKCharacteristicTypeIdentifier"
 WORKOUT_PREFIX = "HKWorkoutActivityType"
