@@ -10,6 +10,7 @@ import VitalsPage from "./pages/vitals/VitalsPage";
 import WorkoutsPage from "./pages/workouts/WorkoutsPage";
 import SleepPage from "./pages/sleep/SleepPage";
 
+// Full dashboard app
 function App() {
   return (
     <Routes>
