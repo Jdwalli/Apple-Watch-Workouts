@@ -2,11 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	html {
-	}
-	a {
-		@apply text-sky-500 hover:underline;
-	}
+body {
+	background-color: black;
+	color: #f4f3f4;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
+
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter';
+  font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    letter-spacing: normal;
+    text-align: left;
 }
 

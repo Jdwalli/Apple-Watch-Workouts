@@ -10,11 +10,12 @@ interface Props {
 }
 
 const primaryStyles =
-  'text-sm text-white font-semibold bg-green-600 px-5 py-2 mx-2 rounded';
+  'inline-block text-sm text-green rounded text-base font-bold cursor-pointer mx-0 my-2 px-4 py-2 border-2 border-solid border-green';
+
 const secondaryStyles =
-  'text-sm text-white font-semibold bg-purple-600 px-5 py-2 mx-2 rounded';
+  'inline-block text-sm text-red rounded text-base font-bold cursor-pointer mx-0 my-2 px-4 py-2 border-2 border-solid border-red';
 const disabled =
-  'text-sm text-shark-400 bg-shark-100 px-5 py-2 mx-2 rounded opacity-70 cursor-not-allowed';
+"inline-block text-sm text-gray rounded text-base font-bold cursor-pointer mx-0 my-2 px-4 py-2 border-2 border-solid border-green opacity-70 cursor-not-allowed"
 
   const styles = {
     primary: primaryStyles,
