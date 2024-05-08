@@ -1,11 +1,16 @@
 import React from "react";
 
+// Workout components
+import WorkoutControl from "./WorkoutControl";
+import WorkoutVisualizer from "./WorkoutVisualizer";
+
 interface Props {}
 
 const WorkoutsPage: React.FC<Props> = (props: Props) => {
   return (
     <div>
-      <h1> Welcome to the Workouts Page!</h1>
+      <WorkoutControl />
+      <WorkoutVisualizer />
     </div>
   );
 };
